@@ -1,0 +1,119 @@
+Virtual DOM memory NODe
+pure Javascruot Object in memory representaion of the DOM
+Reder() creates virtual Dome Elements 
+render () is called whenever somthing is changed, render call many times.
+
+react application calls virtual DOm 
+
+one level props pass form parent to child
+
+
+.babelrc : stage-2 : to inculde variable inside class in ES7 to convery code
+
+syntax-dynamic-import : for lazy loading 
+
+HMRDerver----> HMR Runtime
+
+
+
+
+
+
+^Bundle.js ----------> Browser Bundle.js
+|											|
+|	
+	HMR Server <-------->HMR RUntime
+wepackCompiler			|
+				JS updates
+
+
+
+State is local to component 
+stae is mutable can changed
+
+compoent.setState(next stare,callback)
+
+State1 diffing  staet 2 
+
+dom mutatuion (added and removed elemnt from state 1 to state2)
+
+
+Constructor 
+compoentn WIll mount -- Takes the vitual DOm
+render()- compare virtual DOm and real DOM
+componentDid MOunt
+ComponentWillUnmount
+
+
+
+compoentnWillreciveProps
+shouldCmponentUpdates -- By default called in react
+compnentwillUpdates
+render
+compoentDidUpdates
+
+Shallow Compare - compare refrences {for props and state}
+
+
+
+
+================================================================
+
+
+React Router Component router V4 Beta Version include the Match
+
+HTML5 mode (xx/yy/dd/tt/PATH) - No has in url 
+
+
+Has History with HASh (#)
+Switch and HasRouter from react-router-dom
+
+
+HAsHURL-- Cons with hash its not SEO fridly , it will not crawal
+
+HTML5 Mode -- GOOD for SEO -- CONS server side supoort needed
+
+{this.props.children} - put this for proper rendering 
+
+when we set in parent it as state
+when it comes to child it come as props
+
+
+vertual DOM to Real DOM  data flow
+
+
+=================================================================
+
+Context 
+
+
+=================================================================
+
+REDUX (State/DATA Management)
+
+Redux is FLUx implementiation
+
+Reducers : 
+PAYLOAD is nothing what u data passing(action.value or payload)
+
+default means passsing the old state  
+Reducer does not show any value as its pure function
+
+
+Store:
+whatever data return by reducer store will have only that data 
+
+Dispatch internally call reducer
+
+Subscribe is for evry dispatch 
+any compoenent intersed in data can subdcribe
+
+
+
+component did mount(){
+	this.unscip ve = store.subsribe(()=>{
+this.setstae({
+result: store.getState();}))
+}
+component un mount(){
+unscip ve}

@@ -1,0 +1,32 @@
+Store for data only to get the data [it all client side in memory]
+
+Reducer does not have data byits own
+
+[...state] just returning new array
+
+(1)store.dispatch ----> (2)reducer -----> (3)store ----> (4)store.getState
+[How data flow]
+
+Actions are helper 
+
+without react-redux how things happen :
+//Issue 1 
+You have to call store for every component
+imort store
+
+
+//Issue 2
+You have to call getState for every component
+<Cart item={store.getStore()}/>
+
+//Issue 4 
+
+You have to call dispatch 
+
+
+//issue 5
+Issue we have to unsubscripbe by force update in componentWillUnmount
+
+
+HigherOrderComponent [Already coverded uoe in react-redux package]
+just avoid repeatetive work above mentioed

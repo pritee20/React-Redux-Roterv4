@@ -1,0 +1,201 @@
+ES6 new things added 
+
+Loop : For of
+
+
+Default values in function parameters: 
+function add(a=0,b=0){
+
+return a+b
+} 
+
+add(undefined,20); 0,0
+//
+
+
+
+Rest oprator:  basicalyy array only work with function declaretion
+
+function addPoints(name, ...points){
+ for(let point of points){
+
+	console.log(point);
+}
+
+}
+
+
+addPoints('Pritee', 10,20,30,{x:60});
+
+
+Spread oprators:
+
+
+
+let a =[10,,20,30];
+let list = [10, ...a, 70];
+console.log(list)
+
+
+
+
+Syntatical sugar in ES6
+
+let data = {a:2,b:7}
+
+
+let {a,b} = data
+
+
+
+
+function add({a,b}){
+
+return a+b
+
+}
+
+add(data)
+
+
+For objet orders does not matters
+but for array order matters as it follow indexing 
+Assosiative array : if value is not there it give undefined
+
+
+
+class Shape {
+ constructor (name){
+		let test = "";
+		this.name = name;
+
+}
+
+getname(){return this.name}
+setName(name){
+	this.name = name;
+}
+
+}
+
+arrow opratores  
+
+
+let a = a=> a*a;
+
+
+
+class Counter{
+	start(){
+		this.count = 0;
+
+	setInterval(()=>{
+ //preserv this context 
+this.count ++;
+		
+},2000)
+}
+}
+
+
+
+back Quote:
+let firstname = 'Pritee';
+let lastname = 'Tanwar' ; 
+
+let fullname = `Miss ${firstname}${lastname}`
+
+
+
+ES6 Module appraoch with export and import and avoid global escape
+
+
+
+// class name is same for tow module
+
+import {product as productModle}
+
+
+// export default only one time 
+
+dont use {} via importing default class - imorting with diffrent name possible
+
+
+class default Service;// impoat serciveEx//
+
+
+
+
+//////////////////Tooling/////////////
+
+
+Source -map  jsut debug 
+
+/////React 15.6.1 /// Sementic version
+15 Major
+6 is Minor 
+1 is patch version
+
+
+^15.6.1
+15 is locaked , may get latest minor or patch
+
+
+avoid if some plugin is not goingto be includ ein application ^,*
+
+
+/// Roming profile to get cache npm modules
+
+/// npm list to show all modules
+
+
+
+//babel -cli just to see how the code is converting not required with webpack
+
+
+
+///http://code.nodesen.se/
+
+
+// Babel presets mean plugins :
+This is to convert ES6 to ES 5 - this one of the plugins to do that 
+
+
+.babelrc : for babel setting files,stores the present and plugins
+
+
+
+/// naming convention 
+
+if its class make it caps of file name
+
+
+//React has no modals, no html , no controller
+
+React.createElement('img',{src:'t.jpg'})// solving the proble to use JSX: jacascript+XML =  JSX
+
+
+//<App/> - virtual dom 
+and injecting the virtual do in document.getElementById('root') is real dom
+
+
+//Webpack bundlers
+//Webpack-dev-server : serve the file
+//--hot : sending the updated module only rather then sending complete all module
+
+/// diff ing to update the real dom to virtual dom : React check the text node and html node
+
+
+//Parent to child data pasing through props{this is imutable}
+
+
+//map: let a = [1,2,3,4];
+a.map(n=> n*2);
+
+
+
+
+
+
+
+
